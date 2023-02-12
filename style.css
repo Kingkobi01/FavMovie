@@ -18,18 +18,22 @@ img {
 }
 
 body {
-	background: #bdddf7;
-	color: #232525;
-	font-family: "Noto-Sans-Display";
+	background: #c8e2f7;
+	color: #0c0e2b;
+	font-family: "Roboto";
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding-top: 0.2em;
 }
 
+header {
+	font-family: Roboto;
+	font-size: 2.4rem;
+}
 
 .container {
-	max-width: 80vw;
+	max-width: 60vw;
 	display: flex;
 	flex-direction: column;
 }
@@ -50,24 +54,103 @@ nav {
 	align-items: center;
 	padding-inline: 2em;
 	padding-block: 1em;
-	background: rgb(22, 26, 78);
+	background: #0c0e2b;
 	color: #a1d1f8;
 	margin-bottom: 0;
 }
 
 .navBrand {
-	font-family: "Roboto";
-	font-style: oblique;
+	letter-spacing: .3rem;
+	transition: letter-spacing 300ms linear;
+}
+
+.navBrand:hover {
+	letter-spacing: .35rem;
 }
 
 .nav_list {
+	font-family: "Noto Sans Display";
 	display: flex;
 	width: 40%;
 	justify-content: space-between;
 	list-style: none;
 	text-transform: uppercase;
 	font-weight: bolder;
-
 }
 
 /* NAVBAR */
+
+#sypnosis,
+#cast {
+	margin-bottom: 2em;
+}
+
+.topic {
+	font-size: 1.8rem;
+	line-height: 2;
+	position: relative;
+	padding-inline-start: .5em;
+	margin-bottom: 0.5rem;
+}
+
+.topic::before {
+	position: absolute;
+	display: block;
+	content: "";
+	background: #0c0e2b;
+	width: 4px;
+	height: 90%;
+	left: 0;
+	border-radius: 7px;
+}
+
+.card-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5em;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+	width: auto;
+	height: 200px;
+
+}
+
+.card .description {
+	font-size: 0.2em;
+	padding: 20px;
+	text-align: start;
+}
+
+.card p {
+	font-size: small;
+	line-height: 2ch;
+	margin-top: 1.2rem;
+}
+
+.card h3 {
+	padding-bottom: 0;
+}
+
+.card a:hover {
+	border-bottom: 2px solid;
+}
