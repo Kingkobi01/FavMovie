@@ -230,3 +230,24 @@ footer a:hover {
 	font-style: normal;
 	letter-spacing: .4px;
 }
+
+@media screen and (max-width:1040px) {
+	.container {
+		max-width: 90vw;
+	}
+
+	footer {
+		min-width: 90vw;
+	}
+
+	nav {
+		flex-direction: column;
+		gap: .75em;
+	}
+
+	.nav_list {
+		gap: .5em;
+		justify-content: center;
+	}
+
+}
