@@ -22,6 +22,7 @@ body {
 	color: #0c0e2b;
 	font-family: "Roboto";
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding-top: 0.2em;
@@ -30,6 +31,7 @@ body {
 header {
 	font-family: Roboto;
 	font-size: 2.4rem;
+	margin-bottom: 1rem;
 }
 
 .container {
@@ -78,6 +80,35 @@ nav {
 	font-weight: bolder;
 }
 
+.nav_item {
+	position: relative;
+}
+
+.nav_item::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background: #a1d1f8;
+	border-radius: 7px;
+	bottom: -3px;
+	left: 0;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 200ms linear;
+
+}
+
+.nav_item:hover {
+	letter-spacing: 1.5px;
+	transition: letter-spacing 200ms linear;
+}
+
+.nav_item:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
 /* NAVBAR */
 
 #sypnosis,
@@ -104,8 +135,27 @@ nav {
 	border-radius: 7px;
 }
 
+.more {
+	display: block;
+	margin-top: 2em;
+	border: 1.2px solid #0c0e2b;
+	width: 6.75em;
+	text-align: center;
+	padding-block: .65em;
+	transition: all 200ms linear;
+	font-weight: bold;
+}
+
+.more:hover {
+	color: #a1d1f8;
+	border: #a1d1f8;
+	background: #0c0e2b;
+	border-radius: 5px;
+}
+
 .card-wrapper {
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
 	gap: 1.5em;
 	flex-wrap: wrap;
@@ -153,4 +203,20 @@ nav {
 
 .card a:hover {
 	border-bottom: 2px solid;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 4em;
+	justify-content: space-evenly;
+	background: #0c0e2b;
+	color: #a1d1f8;
+	min-width: 60vw;
+	padding: .65em;
+}
+
+footer>a {
+	display: block;
 }
